@@ -25,7 +25,7 @@ function makeLogFn(consoleFn, decorator, logLevel) {
             console[consoleFn](
                 decorator,
                 getOptions().formatTimestamp(new Date()),
-                this.prefix + ':',
+                this.prefix + ' ➤',
                 ...arguments
             );
         }
