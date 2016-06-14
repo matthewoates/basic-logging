@@ -1,10 +1,10 @@
 import Logger from './Logger';
-import {setOptions} from './Options';
+import {_setOptions} from './Options';
 import Levels from './Levels';
 
-export default class Blog {
+class Blog {
     static setOptions(options) {
-        setOptions(options);
+        _setOptions(options);
     }
 
     static getInstance(options) {
@@ -14,4 +14,18 @@ export default class Blog {
     }
 }
 
-export var LogLevels = Levels;
+Blog.LogLevels = Levels;
+
+//export default Blog;
+module.exports = Blog; // mother fucker
+
+// export default {};
+//
+// export function setOptions(options) { _setOptions(options); }
+// export function getInstance(options) {
+//     if (typeof options.prefix !== 'string') throw new Error('No prefix specified.');
+//
+//     return new Logger(options);
+// }
+//
+//export var LogLevels = Levels;

@@ -9,6 +9,6 @@ export function getOptions() {
     return options;
 }
 
-export function setOptions(newOptions) {
+export function _setOptions(newOptions) {
     options = {...options, ...newOptions};
 }
